@@ -4,7 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "version": "9.4.2-patch",
+  "version": "9.4.2",
   "scripts": {
     "lerna": "lerna",
     "dev": "lerna run build --stream --parallel",
