@@ -382,6 +382,8 @@ export default class Router implements BaseRouter {
       url = addBasePath(url)
       as = addBasePath(as)
 
+      const { pathname, query, protocol } = parse(delBasePath(url), true)
+
       // Add the ending slash to the paths. So, we can serve the
       // "<page>/index.html" directly for the SSR page.
       if (process.env.__NEXT_EXPORT_TRAILING_SLASH) {
@@ -409,8 +411,6 @@ export default class Router implements BaseRouter {
         Router.events.emit('hashChangeComplete', as)
         return resolve(true)
       }
-
-      const { pathname, query, protocol } = parse(url, true)
 
       if (!pathname || protocol) {
         if (process.env.NODE_ENV !== 'production') {
