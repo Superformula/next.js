@@ -1,5 +1,0 @@
-**/.next/**
-**/_next/**
-**/dist/**
-packages/next/compiled/**/*
-lerna.json

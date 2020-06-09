@@ -1,7 +1,0 @@
-node_modules/
-
-# NextJs build
-.next/
-
-# Firebase cache
-.firebase/
